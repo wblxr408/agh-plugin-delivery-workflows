@@ -1,0 +1,110 @@
+{
+  "name": "@wblxr408/delivery-workflows",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Adapt reference projects into demos and package Skills around representative workflows.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-plugin-delivery-workflows"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "agh.market.json",
+    "skills"
+  ],
+  "agnes": {
+    "provides": [
+      "skills",
+      "bundle"
+    ],
+    "contributions": [
+      {
+        "kind": "skill",
+        "id": "@wblxr408/delivery-workflows/workflow-project-demo",
+        "path": "./skills/workflow-project-demo/SKILL.md"
+      },
+      {
+        "kind": "skill",
+        "id": "@wblxr408/delivery-workflows/workflow-skill-adaptation",
+        "path": "./skills/workflow-skill-adaptation/SKILL.md"
+      }
+    ],
+    "bundles": {
+      "workflow-project-demo": {
+        "profile": {
+          "skills": [
+            "workflow-project-demo"
+          ]
+        },
+        "presets": {
+          "workflow-project-demo": {
+            "name": "workflow-project-demo",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "Project Reuse and Demo Delivery",
+            "zh-CN": "参考项目复用与演示"
+          },
+          "description": {
+            "en": "Project Reuse and Demo Delivery",
+            "zh-CN": "从参考项目提取能力并完成可验证的端到端演示。"
+          },
+          "preset": "workflow-project-demo",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "$workflow-project-demo Project Reuse and Demo Delivery. I will provide the input and expected result.",
+              "zh-CN": "$workflow-project-demo 请基于参考项目完成这条演示主线；我会提供参考链接、目标入口和代表输入。"
+            }
+          }
+        }
+      },
+      "workflow-skill-adaptation": {
+        "profile": {
+          "skills": [
+            "workflow-skill-adaptation"
+          ]
+        },
+        "presets": {
+          "workflow-skill-adaptation": {
+            "name": "workflow-skill-adaptation",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "Skill Adaptation and Packaging",
+            "zh-CN": "Skill 定制与打包"
+          },
+          "description": {
+            "en": "Skill Adaptation and Packaging",
+            "zh-CN": "按代表任务改造通用 Skill，形成可安装和可验证的包。"
+          },
+          "preset": "workflow-skill-adaptation",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "$workflow-skill-adaptation Skill Adaptation and Packaging. I will provide the input and expected result.",
+              "zh-CN": "$workflow-skill-adaptation 请按这个真实任务定制 Skill；我会提供技能来源、触发场景、复用边界和预期产物。"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "displayName": "Project Delivery Workflows",
+      "summary": "Adapt reference projects into demos and package Skills around representative workflows.",
+      "description": "Adapt reference projects into demos and package Skills around representative workflows.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "项目交付与 Skill 定制",
+          "summary": "复用参考项目完成演示，按代表任务定制和打包 Skill。",
+          "description": "复用参考项目完成演示，按代表任务定制和打包 Skill。"
+        }
+      }
+    }
+  }
+}
