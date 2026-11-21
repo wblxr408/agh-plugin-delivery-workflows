@@ -21,12 +21,12 @@
     "contributions": [
       {
         "kind": "skill",
-        "id": "@wblxr408/delivery-workflows/workflow-project-demo",
+        "id": "@wblxr408/workflow-project-demo",
         "path": "./skills/workflow-project-demo/SKILL.md"
       },
       {
         "kind": "skill",
-        "id": "@wblxr408/delivery-workflows/workflow-skill-adaptation",
+        "id": "@wblxr408/workflow-skill-adaptation",
         "path": "./skills/workflow-skill-adaptation/SKILL.md"
       }
     ],
